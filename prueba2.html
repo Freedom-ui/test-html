@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hola Mundo</title>
+</head>
+
+<body>
+  <h1>Hola diseño web</h1>
+  <table style="border: 1px solid">
+    <thead>
+      <tr>
+        <th style="text-align: left">ID</th>
+        <th style="text-align: left">NAME</th>
+        <th style="text-align: left">NUMBER</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td><input></td>
+        <td><input></td>
+        <td><input></td>
+        <td><button onclick="add()">ADD</button></td>
+      </tr>
+      <tr></tr>
+    </tfoot>
+  </table>
+  <script>
+    window.onload = () => {
+      clear()
+    }
+
+    function add() {
+      var a = document.getElementsByTagName('input')[0].value
+      var b = document.getElementsByTagName('input')[1].value
+      var c = document.getElementsByTagName('input')[2].value
+
+      var table = document.getElementsByTagName('tbody')[0]
+      var row = table.insertRow()
+      var cell = row.insertCell()
+      cell.innerHTML = a
+      cell = row.insertCell()
+      cell.innerHTML = b
+      cell = row.insertCell()
+      cell.innerHTML = c
+
+      clear()
+    }
+
+    function clear() {
+      document.getElementsByTagName('input')[0].value = ''
+      document.getElementsByTagName('input')[1].value = ''
+      document.getElementsByTagName('input')[2].value = ''
+      document.getElementsByTagName('input')[0].focus()
+    }
+  </script>
+</body>
+
+</html>
